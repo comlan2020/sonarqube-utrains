@@ -1,6 +1,18 @@
 #!bin/bash
 
 ## Sonarqube install on centos 7
+## Please run this as user vagrant
+
+user_name=`whoami`
+
+
+if [ $user_name != vagrant ];
+
+then
+
+echo "Must be run as user vagrant !!!!"
+exit 1
+fi
 
 sudo yum update -y
 
